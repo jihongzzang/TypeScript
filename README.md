@@ -4,12 +4,16 @@
 
 ### 공부 주제
 
-#### Class
+### Class
 
-- [class1](src/Class/class.ts)
-- [class2](src/Class/class2.ts)
+- ### [class1](src/Class/class.ts)
+- ### [class2](src/Class/class2.ts)
 
 #### Generic
 
-- [generic](src/Generic/generic.ts)
-- [generic2](src/Generic/generic2.ts)
+- ### [generic](src/Generic/generic.ts)
+- ### [generic2](src/Generic/generic2.ts)
+
+#### Type
+
+- ### [primitiveType](src/TypeJsTs/PrimitiveType.md)
