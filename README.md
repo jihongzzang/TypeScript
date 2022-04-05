@@ -4,7 +4,7 @@
 
 ### 공부 주제
 
-### Class
+#### Class
 
 - ### [class1](src/Class/class.ts)
 - ### [class2](src/Class/class2.ts)
