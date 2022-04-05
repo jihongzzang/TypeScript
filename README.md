@@ -16,4 +16,6 @@
 
 #### Type
 
-- ### [primitiveType](src/TypeJsTs/PrimitiveType.md)
+- ### [tsTypeJsType](src/TypeJsTs/TsTypeJsType.md)
+- ### [primitiveType](src/TypeJsTs/Primitive/PrimitiveType.md)
+- ### [referenctType](src/TypeJsTs/Reference/ReferenceType.md)
