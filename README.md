@@ -25,3 +25,4 @@
 - ### [typeSystem](src/TypeSystem/TypeSystem.md)
 - ### [structuralTypeSystem](src/TypeSystem/StructuralTypeSystem.md)
 - ### [typeCompatibility](src/TypeSystem/TypeCompatibility.md)
+- ### [typeAlias](src/TypeSystem/TypeAlias.md)
