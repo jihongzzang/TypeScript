@@ -19,3 +19,9 @@
 - ### [tsTypeJsType](src/TypeJsTs/TsTypeJsType.md)
 - ### [primitiveType](src/TypeJsTs/Primitive/PrimitiveType.md)
 - ### [referenctType](src/TypeJsTs/Reference/ReferenceType.md)
+
+#### TypeSystem
+
+- ### [typeSystem](src/TypeSystem/TypeSystem.md)
+- ### [structuralTypeSystem](src/TypeSystem/StructuralTypeSystem.md)
+- ### [typeCompatibility](src/TypeSystem/TypeCompatibility.md)
