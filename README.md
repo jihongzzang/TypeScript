@@ -6,6 +6,7 @@
 
 #### Class
 
+- ### [class](src/Class/class.md)
 - ### [class1](src/Class/class.ts)
 - ### [class2](src/Class/class2.ts)
 
@@ -26,3 +27,16 @@
 - ### [structuralTypeSystem](src/TypeSystem/StructuralTypeSystem.md)
 - ### [typeCompatibility](src/TypeSystem/TypeCompatibility.md)
 - ### [typeAlias](src/TypeSystem/TypeAlias.md)
+
+#### Interface
+
+- ### [interface-basic](src/Interface/interface1.ts)
+- ### [interface-optionalPropery](src/Interface/interface2.ts)
+- ### [interface-functionInInterface](src/Interface/interface3.ts)
+- ### [interface-classImplementsInterface](src/Interface/interface4.ts)
+- ### [interface-extendsInterface](src/Interface/interface5.ts)
+- ### [interface-functionInterface](src/Interface/interface6.ts)
+- ### [interface-readOnlyInterface](src/Interface/interface7.ts)
+- ### [interface-typeAliasVsInterace](src/Interface/interface8.ts)
+
+#### Class
