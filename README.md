@@ -7,8 +7,18 @@
 #### Class
 
 - ### [class](src/Class/class.md)
+- ### [basic](src/Class/example.ts)
 - ### [class1](src/Class/class.ts)
 - ### [class2](src/Class/class2.ts)
+- ### [accessModifiers](src/Class/accessModifier.ts)
+- ### [initializationInConstructorParams](src/Class/initialization.ts)
+- ### [Getter & Setters](src/Class/initialization.ts)
+- ### [Readonly properties](src/Class/readonlyProperties.ts)
+- ### [Index Signatures in class](src/Class/indexSig.ts)
+- ### [StaticProperties & Methods](src/Class/staticPMethod.ts)
+- ### [Singletons](src/Class/singletons.ts)
+- ### [extends](src/Class/extends.ts)
+- ### [Abstract Classes](src/Class/abstract.ts)
 
 #### Generic
 
@@ -38,5 +48,3 @@
 - ### [interface-functionInterface](src/Interface/interface6.ts)
 - ### [interface-readOnlyInterface](src/Interface/interface7.ts)
 - ### [interface-typeAliasVsInterace](src/Interface/interface8.ts)
-
-#### Class
