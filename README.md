@@ -4,27 +4,6 @@
 
 ### 공부 주제
 
-#### Class
-
-- ### [class](src/Class/class.md)
-- ### [basic](src/Class/example.ts)
-- ### [class1](src/Class/class.ts)
-- ### [class2](src/Class/class2.ts)
-- ### [accessModifiers](src/Class/accessModifier.ts)
-- ### [initializationInConstructorParams](src/Class/initialization.ts)
-- ### [Getter & Setters](src/Class/initialization.ts)
-- ### [Readonly properties](src/Class/readonlyProperties.ts)
-- ### [Index Signatures in class](src/Class/indexSig.ts)
-- ### [StaticProperties & Methods](src/Class/staticPMethod.ts)
-- ### [Singletons](src/Class/singletons.ts)
-- ### [extends](src/Class/extends.ts)
-- ### [Abstract Classes](src/Class/abstract.ts)
-
-#### Generic
-
-- ### [generic](src/Generic/generic.ts)
-- ### [generic2](src/Generic/generic2.ts)
-
 #### Type
 
 - ### [tsTypeJsType](src/TypeJsTs/TsTypeJsType.md)
@@ -48,3 +27,32 @@
 - ### [interface-functionInterface](src/Interface/interface6.ts)
 - ### [interface-readOnlyInterface](src/Interface/interface7.ts)
 - ### [interface-typeAliasVsInterace](src/Interface/interface8.ts)
+
+#### Class
+
+- ### [class](src/Class/class.md)
+- ### [basic](src/Class/example.ts)
+- ### [class1](src/Class/class.ts)
+- ### [class2](src/Class/class2.ts)
+- ### [accessModifiers](src/Class/accessModifier.ts)
+- ### [initializationInConstructorParams](src/Class/initialization.ts)
+- ### [Getter & Setters](src/Class/initialization.ts)
+- ### [Readonly properties](src/Class/readonlyProperties.ts)
+- ### [Index Signatures in class](src/Class/indexSig.ts)
+- ### [StaticProperties & Methods](src/Class/staticPMethod.ts)
+- ### [Singletons](src/Class/singletons.ts)
+- ### [extends](src/Class/extends.ts)
+- ### [Abstract Classes](src/Class/abstract.ts)
+
+#### Generic
+
+- ### [Generic](src/Generic/generic.md)
+- ### [Generic1](src/Generic/generic.ts)
+- ### [Generic2](src/Generic/generic2.ts)
+- ### [GenericVsAny](src/Generic/genericAny.ts)
+- ### [GenericBasic](src/Generic/generic3.ts)
+- ### [GenericsArray & Tuple](src/Generic/generic3.ts)
+- ### [GenericFunction](src/Generic/generic4.ts)
+- ### [GenericClass](src/Generic/generic5.ts)
+- ### [GenericExtends](src/Generic/generic5.ts)
+- ### [keyOf & typeLookUpSystem](src/Generic/generic6.ts)
