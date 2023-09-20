@@ -44,6 +44,7 @@ paramCallFunc(() => {
 //   callback: (el: number) => undefined
 // ): void;
 
+//declare는 외부에서 만들어진 타입을 선언할시에 그럼 우리가 평소에 라이브러리 쓰는거 이런거 모두 다 영향
 declare function forEachFunc(
   arr: number[],
   callback: (el: number) => void
@@ -76,3 +77,116 @@ const anoVoid: AnoVoid = {
 
 const bVoid = anoVoid.talk();
 const numberVoid = anoVoid.talk() as unknown as number;
+
+//unknown 은 타입을 모르겠을때
+const unknown: unknown = anoVoid.talk();
+
+(unknown as AnoVoid).talk();
+
+// unknown은 try catch 에서 catch (e) 에서 많이볼수있다.
+
+try {
+} catch (error: unknown) {
+  console.log((error as Error).message);
+}
+
+//타입가드 => 쉽게생각해서 타입이 뭐일때 이거 뭐일때 이거이다.
+function numOrStr(a: number | string): string {
+  if (typeof a === 'string') {
+    return a;
+  }
+  return a.toFixed(1);
+}
+
+function numOrNumArray(a: number | number[]) {
+  if (Array.isArray(a)) {
+    return a.concat(2);
+  }
+  return a.toFixed(1);
+}
+
+//class그 자체가 타입에 올 수 있따.
+class A {
+  aaa() {}
+}
+
+class B {
+  bbb() {}
+}
+
+function aOrbFunc(param: A | B): void {
+  if (param instanceof A) {
+    param.aaa();
+  } else {
+    param.bbb();
+  }
+}
+
+const aOrbArrow: (param: A | B) => void = param => {
+  if (param instanceof A) {
+    param.aaa();
+  } else {
+    param.bbb();
+  }
+};
+
+// aOrbFunc(A); (x)
+// aOrbArrow(A); (x)
+
+aOrbFunc(new A());
+aOrbArrow(new A());
+
+type BBB = { type: 'b'; bbb: string };
+type CCC = { type: 'c'; ccc: string };
+type DDD = { type: 'd'; ddd: string };
+
+function typeCheck(a: BBB | CCC | DDD) {
+  if ('bbb' in a) {
+    a.type;
+  } else if ('ccc' in a) {
+    a.type;
+  } else {
+    a.type;
+  }
+  // if (a.type === 'b') {
+  //   a.bbb;
+  // } else if (a.type === 'c') {
+  //   a.ccc;
+  // } else {
+  //   a.ddd;
+  // }
+}
+
+interface Cat {
+  meow: number;
+}
+
+interface Dog {
+  bow: number;
+}
+
+//타입을 구분해주는 커스텀 함수를 직접 만들 수 있다.
+
+//return 값에 is가 들어가있으면 customTypeGuard
+function isDog(a: Cat | Dog): a is Dog {
+  //타입 판별을 만들 수 있음
+  if ((a as Cat).meow) {
+    return false;
+  }
+  return true;
+}
+
+function pet(a: Cat | Dog) {
+  if (isDog(a)) {
+    console.log(a.bow);
+  }
+  if ('meow' in cat) {
+    console.log(cat.meow);
+  }
+}
+
+const cat: Cat | Dog = { meow: 3 };
+
+if (isDog(cat)) {
+  console.log(cat.meow);
+}
