@@ -67,8 +67,43 @@ const filteredArr = [1, 2, 3, 4, 5].filter(value => value * 2);
 
 const filteredArray = ['1', '2', '3', '4', '5'].filter(value => value == '1');
 
-const filteredArray2 = [1, '2', 3, '4', 5].filter(
-  value => typeof value === 'string'
-);
+const predicate = (value: string | number): value is string =>
+  typeof value === 'string';
+
+const filteredArray2 = [1, '2', 3, '4', 5].filter(predicate);
+
+const filteredArray3 = [1, '2'].filter<string>(predicate);
 
 //이건 두 필터타입 중 무조건 위에 거
+
+// 타입 만들기
+
+interface Arr<T> {
+  forEach(callback: (item: T) => void): void;
+  map<S>(callback: (value: T) => S): S[];
+}
+
+const generatedArrA: Arr<number> = [1, 2, 3];
+const generatedArrB: Arr<string> = ['1', '2', '3'];
+const generatedArrC: Arr<number> = [1, 2, 3];
+
+generatedArrA.forEach(item => {
+  item.toFixed(1);
+});
+
+generatedArrA.forEach(item => {
+  console.log(item);
+  return '3';
+});
+
+generatedArrB.forEach(item => {
+  item.charAt(3);
+});
+
+generatedArrB.forEach(item => {
+  console.log(item);
+  return '3';
+});
+
+generatedArrA.map(v => v + 1);
+generatedArrA.map(v => v.toString());
