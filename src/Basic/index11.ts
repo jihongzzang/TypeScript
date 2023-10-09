@@ -81,11 +81,12 @@ const filteredArray3 = [1, '2'].filter<string>(predicate);
 interface Arr<T> {
   forEach(callback: (item: T) => void): void;
   map<S>(callback: (value: T) => S): S[];
+  filter<S extends T>(callback: (v: T) => v is S): S[];
 }
 
 const generatedArrA: Arr<number> = [1, 2, 3];
 const generatedArrB: Arr<string> = ['1', '2', '3'];
-const generatedArrC: Arr<number> = [1, 2, 3];
+const generatedArrC: Arr<string | number> = [1, '2', 3, '4', 5];
 
 generatedArrA.forEach(item => {
   item.toFixed(1);
@@ -107,3 +108,16 @@ generatedArrB.forEach(item => {
 
 generatedArrA.map(v => v + 1);
 generatedArrA.map(v => v.toString());
+generatedArrA.map(v => v % 2 === 0);
+
+generatedArrB.map(v => +v);
+
+const generatedAFilter = generatedArrA.filter((v): v is number => v % 2 === 0);
+const generatedCFilter = generatedArrC.filter(
+  (v): v is string => typeof v === 'string'
+);
+
+const predicateAnother = (v: string | number): v is number =>
+  typeof v === 'number';
+
+const generatedCFilterAnother = generatedArrC.filter(predicateAnother);
