@@ -89,3 +89,49 @@ const flatExam3 = [1, 2, 3, [1, 2], [[1], [2]]].flat(2);
 //FlatArray<(number), -1>[]
 
 //number[]
+
+type IsNever<T> = [T] extends [never] ? true : false;
+
+type IsNever2<T> = T extends never ? true : false;
+
+type A1 = IsNever<never>; // true
+type B1 = IsNever2<never>; //never
+
+// 타입 매개변수와 union이 만나 분배 법칙이 실현
+
+type A2 = IsNever<boolean>;
+
+interface V0 {
+  value: any;
+}
+
+const returnV0 = <T extends V0>(): T => {
+  return { value: 'test' }; // 에러
+};
+
+function onlyBoolean<T extends boolean>(arg: T = false): T {
+  return arg; //never도 있음
+}
+
+type Union<T> = T extends { a: infer U; b: infer U } ? U : never;
+
+type Result1 = Union<{ a: 1 | 2; b: 2 | 3 }>;
+
+type Intersection<T> = T extends {
+  a: (pa: infer U) => void;
+  b: (pb: infer U) => void;
+}
+  ? U
+  : never;
+
+type Result22 = Intersection<{ a(pa: 1 | 2): void; b(pb: 2 | 3): void }>;
+
+function double<T extends [T] extends [string] ? string : number>(
+  x: T
+): [T] extends [string] ? string : number {
+  // 가장 마지막에 평가되는 동작을 고치기
+  return x;
+}
+
+double('hi');
+double(123);
